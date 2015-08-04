@@ -1,0 +1,112 @@
+
+body{
+	background-color: white;
+	height: 100%;
+	margin-left: 10%;
+	margin-right: 10%;
+	}
+.mainPageContainer{
+	background-color: rgba(161, 173, 167, 0.75);
+	}
+.mainPageContainer h1{
+    border-bottom: 1px solid black;
+    padding: 9px;
+}
+.hide{
+	display: none;
+}
+h1{
+	text-align: center;
+}
+#Enter{
+  text-align: center;
+  height: 30px;
+  width: 91px;
+  margin-top: 9px;
+  margin-left: 139px;
+}
+.SearchBar{
+	margin-top: 0px;
+	margin-left: 150px;
+	margin-right: 150px;
+	float: left;
+}
+.Add{
+	margin-top: 30px;
+
+}
+.MainContainer h2{
+	margin-top: 50px;
+	text-align: center;
+}
+.MainContainer table{
+	width:100%;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+.MainContainer th,td{
+
+    height: 30px;
+	border: 1px solid black;
+	text-align: center;
+}
+.addCandidate{
+	height: 100%;
+	margin-left: 20%
+	margin-right:20%;
+	background-color: grey;
+}
+.addCandidate h1{
+	text-align: center;
+    padding-top: 11px;
+    margin-bottom: 13px;
+}
+form{
+	border:1px solid black;
+	padding: 20px;
+	background-color: rgb(184, 172, 172);
+}
+.addCandidate input{
+	margin-bottom: 10px; 
+
+}
+.labelContainer{
+	display: inline-block;
+	width: 135px;
+}
+#email,#fname{
+	margin-right: 70px;
+}
+.addressContainer{
+	list-style-type: none;
+	display: inline-block;
+	width: 100%;
+}
+.addressContainer li{
+	width: 30%;
+	margin-bottom: 15px;
+}
+.addressContainer input{
+	margin-bottom: 0px;
+	float: right;
+	clear: both;
+}
+#cancelButton{
+  margin-left: 50%;
+  padding: 8px;
+  width: 111px;
+}
+.apartmentContainer{
+	list-style-type: none;
+	display: inline-block;
+	width: 100%;
+}
+.apartmentContainer li{
+	width: 30%;
+	margin-bottom: 15px;
+}
+.apartmentContainer input{
+	margin-bottom: 0px;
+	float: right;
+	clear: both;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Propgod Candidate's Detail</title>
+
+	<link rel="stylesheet" href="css/style.css">
+
+  <script src="js/jquery.js"></script>
+	<script src="js/script.js" type="text/javascript" charset="utf-8">
+		
+	</script>
+</head>
+<body>
+  <div class="mainPageContainer">
+     <h1> Welcome to Candidate Detail Portal</h1>
+     
+     <div>
+        <div class="SearchBar">
+         Search By
+        <select name="SearchBy" >
+        	<option value="id">id</option>
+        	<option value="email">email</option>
+        	<option value="mobile">mobile</option>
+        	<option value="fname">fname</option>
+        	<option value="lname">lname</option>
+        </select>
+
+        <input type="text" placeholder= "Search">
+        <br>
+        <button id="Enter" type="button">Enter</button>
+        </div>
+        <div class="Add">
+        Add new Candidate: 
+        <button type="button" id="addCandidateButton">Add</button>
+        </div>
+      </div>
+      <br>
+
+      <div class="MainContainer">
+         <h2>Candidate List</h2>
+          <table>
+           <caption>Candidate Detail</caption>
+           <thead>
+             <tr>
+               <th>ID</th>
+               <th>email</th>
+               <th>mobile</th>
+               <th>First Name</th>
+               <th>Last Name</th>
+               <th>More Details</th>
+            </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td>bhavya1</td>
+               <td>bhavyasinha1@gmail.com</td>
+               <td>123456789</td>
+               <td>Bhavya</td>
+               <td>Sinha</td>
+               <td><a href="" class="moreDetails">Click Here</td>
+             </tr>
+             <tr>
+               <td>bhavya2</td>
+               <td>bhavyasinha2@gmail.com</td>
+               <td>123456789</td>
+               <td>Bhavya</td>
+               <td>Sinha</td>
+               <td><a href="" class="moreDetails">Click Here</td>
+             </tr>
+             <tr>
+               <td>bhavya3</td>
+               <td>bhavyasinha3@gmail.com</td>
+               <td>123456789</td>
+               <td>Bhavya</td>
+               <td>Sinha</td>
+               <td><a href="" class="moreDetails">Click Here</td>
+             </tr>
+             <tr>
+               <td>bhavya4</td>
+               <td>bhavyasinha4@gmail.com</td>
+               <td>123456789</td>
+               <td>Bhavya</td>
+               <td>Sinha</td>
+               <td><a href="" class="moreDetails">Click Here</td>
+             </tr>
+             <tr>
+               <td>bhavya5</td>
+               <td>bhavyasinha5@gmail.com</td>
+               <td>123456789</td>
+               <td>Bhavya</td>
+               <td>Sinha</td>
+               <td><a href="" class="moreDetails">Click Here</td>
+             </tr>
+             <tr>
+               <td>bhavya6</td>
+               <td>bhavyasinha6@gmail.com</td>
+               <td>123456789</td>
+               <td>Bhavya</td>
+               <td>Sinha</td>
+               <td><a href="" class="moreDetails">Click Here</td>
+             </tr>
+           </tbody>
+         </table>
+      	
+      </div>
+  </div>
+
+  <div class="addCandidate hide">
+    <h1>Enter your Details</h1>
+    <form id="candidateForm">
+      <span class="labelContainer">User Id:</span><input type="text" name="UserID"><br/>
+      <span class="labelContainer">Email:</span><input type="email" id="email" required>
+      <span class="labelContainer">Mobile:</span><input type="number" min="1000000000" max="9999999999" required/><br/>
+      <span class="labelContainer">Password:</span><input type="password" maxlength="10"><br/>
+      <span class="labelContainer">First name:</span><input type="text" name="FirstName" id="fname">
+      <span class="labelContainer">Last Name:</span><input type="text" name="LastName"><br/>
+      <span class="labelContainer">Address:</span><br/>
+      <ul class="addressContainer">
+        <li>block_number:<input type="text" name="B_no"></li>
+        <li>street_name:<input type="text" name="Street_no"></li>
+        <li>postal_code:<input type="number" name="postalCode"></li>
+        <li>city:<input type="text" name="city"></li>
+        <li>state:<input type="text" name="state"></li>
+        <li>country:<input type="text" name="country"></li>
+     </ul><br/>
+      <span class="labelContainer">Apartment Details:</span><br/>
+      <ul class="apartmentContainer">
+        <li>Monthly Rental:<input type="number" name="price"></li>
+        <li>No of Rooms:<input type="number" name="num_rooms"></li>
+        <li>No of Bathrooms:<input type="number" name="num_bathrooms"></li>
+        <li>Area:<input type="number" name="area_sqft"></li>
+      </ul>
+      <input type="submit" value="Submit">
+    </form>
+    <button id="cancelButton"><b>Cancel</b></button>
+  </div>
+
+  <div class="additionalDetails hide">
+    <h1>Still Developing</h1>
+
+    <button type="button" id="backButton" value="Back">Back</button>
+
+    
+  </div>
+
+	
+</body>
+</html>
