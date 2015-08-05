@@ -109,7 +109,7 @@
 
   <div class="addCandidate hide">
     <h1>Enter your Details</h1>
-    <form id="candidateForm">
+    <form id="candidateForm" method="POST">
       <span class="labelContainer">User Id:</span><input type="text" name="UserID"><br/>
       <span class="labelContainer">Email:</span><input type="email" id="email" required>
       <span class="labelContainer">Mobile:</span><input type="number" min="1000000000" max="9999999999" required/><br/>
@@ -132,7 +132,7 @@
         <li>No of Bathrooms:<input type="number" name="num_bathrooms"></li>
         <li>Area:<input type="number" name="area_sqft"></li>
       </ul>
-      <input type="submit" value="Submit">
+      <input type="submit" id="submitFrm" value="Submit">
     </form>
     <button id="cancelButton"><b>Cancel</b></button>
   </div>

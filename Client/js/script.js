@@ -22,5 +22,9 @@ $(document).ready(function() {
 		$('.addCandidate').addClass('hide');
 		$('.additionalDetails').addClass('hide');
 	})
+	$("#submitFrm").on('click',function(){
+		console.log($('#candidateForm').serializeJSON());
+	})
+
 	
 });
