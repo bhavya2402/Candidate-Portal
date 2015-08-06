@@ -107,3 +107,6 @@ form{
 	float: right;
 	clear: both;
 }
+.deleteList img{
+   height: 34px;
+}

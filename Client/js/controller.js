@@ -4,7 +4,7 @@ app.controller('MainContrller', ['$scope', function($scope){
 	$scope.isMainPage = true;
 	$scope.isAddPage = false;
 	$scope.isDetailPage = false;
-	$scope.candidateData = {};
+	$scope.candidateData = [{},{},{}];
 
 	$scope.showAddForm = function() {
 		$scope.isMainPage = false;
@@ -21,6 +21,12 @@ app.controller('MainContrller', ['$scope', function($scope){
 	$scope.goMainPage = function() {
 		$scope.isMainPage = true;
 		$scope.isAddPage = false;
+		$scope.isDetailPage = false;
+	}
+
+	$scope.showFormPage= function() {
+		$scope.isMainPage = false;
+		$scope.isAddPage = true;
 		$scope.isDetailPage = false;
 	}
 
