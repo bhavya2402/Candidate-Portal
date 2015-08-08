@@ -8,6 +8,6 @@ Backend code is implemented using expressJS.
 MongoDB will be used as a database(this still needs to be implemented).
 
 How to Run the server:
-Use: "npm start server" at the location: bhavya-propgod\Propgod-Assignment\Client  to start the server.
+Use: "npm start server" at the location: Client\  to start the server.
 It will run on local HOST: 8080.
 
