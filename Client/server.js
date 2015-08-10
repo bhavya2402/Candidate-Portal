@@ -2,11 +2,16 @@
 var app = require('express')(),
 	express = require('express'),
 	bodyParser = require('body-parser');
+
 var mongoose = require('mongoose');
+var employeeModel = require('./models/employees.model');
 
 var path = require("path");
 
-mongoose.connect('mongodb://localhost:12345/candidate');
+// mongoose.connect('mongodb://bhavya2402:bhavya2402@ds031193.mongolab.com:31193/employeedb');
+
+mongoose.connect('mongodb://bhavya1124:bhavya1124@ds031903.mongolab.com:31903/candidatedb');
+
 
 var port = process.env.PORT || 8080;
 
@@ -25,8 +30,10 @@ app.get('/', function(req, res) {
 
 app.post('/addCandidate', function(req, res) {
 	console.log(req.body);
+	employeeModel.saveEmployee(req.body);
 });
 
 app.listen(port,function(){
 	console.log("Running")
 });
+

@@ -98,11 +98,37 @@
       <input type="button" id="cancelButton" value="Cancel" ng-click="goMainPage()">
       <!-- <button id="cancelButton" ng-click="goMainPage()"><b>Cancel</b></button> -->
     </form>
-    
   </div>
 
   <div class="additionalDetails" ng-show="isDetailPage">
-    <h1>Still Developing</h1>
+    <h1>Candidate Detail</h1>
+    <div>
+    <ul ng-repeat="candidateList in candidateDetailList track by $index">
+      <li>ID:</li>
+      <li>First Name:  {{candidateList.firstName}}</li>
+      <li>Last Name:  {{candidateList.lastName </li>
+      <li>email:  {{candidateList.email}}</li>
+      <li>Mobile:  {{candidateList.mobile}}</li>
+      <li>Address:
+         <ul>
+          <li>Block Number:  {{candidateList.blockno}}</li>
+          <li>Street Name:  {{candidateList.streetname}}</li>
+          <li>City:  {{candidateList.city}}</li>
+          <li>State:  {{candidateList.state}}</li>
+          <li>Country:  {{candidateList.country}}</li>
+          <li>Postal Code::  {{candidateList.postalCode}}</li>          
+         </ul>
+      </li>   
+      <li>Apartment Details:</li>
+         <ul>
+           <li>Monthly Rental:  {{candidateList.rent}}</li>
+           <li>No of Rooms:  {{candidateList.rooms}}</li>
+           <li>No of Bathrooms:  {{candidateList.bathrooms}}</li>
+           <li>Area:  {{candidateList.area}}</li>
+         </ul>
+      </li>
+    </ul>
+    </div>
 
     <button type="button" id="backButton" value="Back" ng-click = "goMainPage()">Back</button>
     <button type="button" id="editDetail" value="Edit" ng-click="showFormPage()">Edit</button>
