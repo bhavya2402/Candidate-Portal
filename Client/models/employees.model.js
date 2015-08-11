@@ -4,7 +4,19 @@ var Schema = mongoose.Schema;
 
 var employeeSchema = new Schema({
 	email : String,
-	mobileNumber : Number
+	mobileNumber : Number,
+	firstName  : String,
+	lastName : String,
+	blockNumber : Number,
+	streetName : String,
+	postalCode : Number,
+	City : String,
+	State : String,
+	Country : String,
+	MonthlyRental : Number,
+	NumRooms : Number,
+	NumBathrooms : Number,
+	ApartmentArea : Number
 });
 
 var employeeModel = mongoose.model('employee',employeeSchema);
@@ -12,11 +24,36 @@ var employeeModel = mongoose.model('employee',employeeSchema);
 function saveEmployee(data) {
 
 	 var email = data.email,
-	 	mobileNumber = data.mobile;
+	 	mobileNumber = data.mobile,
+	 	firstName = data.firstName,
+	 	lastName = data.lastName,
+	 	blockNumber = data.blockno,
+	 	streetName = data.streetname,
+	 	postalCode = data.postalCode,
+	 	City = data.city,
+	 	State = data.state,
+	 	Country = data.country,
+	 	MonthlyRental = data.rent,
+	 	NumRooms = data.rooms,
+	 	NumBathrooms = data.bathrooms,
+	 	ApartmentArea = data.area;
 
 	 var employee = new employeeModel({
 	 	email : email,
-	 	mobileNumber : mobileNumber
+	 	mobileNumber : mobileNumber,
+	 	firstName : firstName,
+	 	lastName : lastName,
+	 	blockNumber : blockNumber,
+	 	streetName : streetName,
+	 	postalCode : postalCode,
+	 	City : City,
+	 	State : State,
+	 	Country : Country,
+	 	MonthlyRental : MonthlyRental,
+	 	NumRooms : NumRooms,
+	 	NumBathrooms : NumBathrooms,
+	 	ApartmentArea : ApartmentArea
+
 	 });
 
 	 employee.save(function(err) {
