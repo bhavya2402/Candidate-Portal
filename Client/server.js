@@ -8,8 +8,6 @@ var employeeModel = require('./models/employees.model');
 
 var path = require("path");
 
-// mongoose.connect('mongodb://bhavya2402:bhavya2402@ds031193.mongolab.com:31193/employeedb');
-
 mongoose.connect('mongodb://bhavya1124:bhavya1124@ds031903.mongolab.com:31903/candidatedb');
 
 
@@ -28,9 +26,31 @@ app.get('/', function(req, res) {
 	res.sendFile(path.join(__dirname+'/views/index.html'));
 });
 
+app.get('/getData', function(req, res) {
+
+	mongoose.model('employee').find(function(err,employee) {
+		if (err) {
+			console.log(err);
+		}else {
+			// console.log(employee);
+			res.send(employee);
+		}
+	});
+});
+
 app.post('/addCandidate', function(req, res) {
 	console.log(req.body);
 	employeeModel.saveEmployee(req.body);
+});
+
+app.post('/deleteCandidate', function(req, res) {
+	mongoose.model('employee').remove(req.body.email)
+	// employeeModel.saveEmployee(req.body);
+});
+
+app.post('/updateCandidate', function(req, res) {
+	console.log(req.body);
+	employeeModel.updateEmployeeByEmail(req.body);
 });
 
 app.listen(port,function(){
