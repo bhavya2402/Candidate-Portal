@@ -32,14 +32,14 @@ app.get('/getData', function(req, res) {
 		if (err) {
 			console.log(err);
 		}else {
-			// console.log(employee);
+			console.log(employee);
 			res.send(employee);
 		}
 	});
 });
 
 app.post('/addCandidate', function(req, res) {
-	console.log(req.body);
+	console.log("Add Data" + req.body);
 	employeeModel.saveEmployee(req.body);
 });
 

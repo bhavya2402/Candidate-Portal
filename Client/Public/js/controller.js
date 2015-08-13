@@ -67,7 +67,7 @@ app.controller('MainContrller', ['$scope', '$http', function($scope, $http){
         .error(function(err) {
             console.log(err);
         });
-        $scope.candidateData = {};
+        // $scope.candidateData = {};
 	}
      
 	$scope.submitForm = function(candidateData) {
@@ -84,7 +84,7 @@ app.controller('MainContrller', ['$scope', '$http', function($scope, $http){
         .error(function(err) {
             console.log(err);
         });
-        $scope.candidateData = {};
+        // $scope.candidateData = {};
 	};
 
 	$scope.fetchDetails = function(){
@@ -101,5 +101,3 @@ app.controller('MainContrller', ['$scope', '$http', function($scope, $http){
 	$scope.fetchDetails();
   
 }]);
-
-

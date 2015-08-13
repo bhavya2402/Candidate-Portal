@@ -1,18 +1,22 @@
 
 body{
-	background-color: white;
+	background-color: rgb(216, 211, 211);
 	height: 100%;
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-top: 0;
 	}
 .mainPageContainer{
-	background-color: rgba(58, 52, 86, 0.75);
+	background-color: rgb(189, 197, 200);
 	}
 .mainPageContainer h1{
-    border-bottom: 1px solid black;
-    padding: 9px;
-        margin-top: 0;
+     text-align: center;
+  padding-top: 11px;
+  margin-bottom: 14px;
+  margin-top: 0;
+  border-bottom: 4px solid rgb(115, 79, 79);
+  padding-bottom: 7px;
+  color: rgb(105, 70, 70);
 }
 h1{
 	text-align: center;
@@ -55,18 +59,19 @@ h1{
 	height: 100%;
 	margin-left: 20%
 	margin-right:20%;
-	background-color: rgba(58, 52, 86, 0.75);
+	background-color: rgb(189, 197, 200);
 }
 .addCandidate h1{
-	text-align: center;
-    padding-top: 11px;
-    margin-bottom: 13px;
-        margin-top: 0;
+	  text-align: center;
+  padding-top: 11px;
+  margin-bottom: 14px;
+  margin-top: 0;
+  border-bottom: 4px solid rgb(115, 79, 79);
+  padding-bottom: 7px;
+  color: rgb(105, 70, 70);
 }
 form{
-	border:1px solid black;
 	padding: 20px;
-	background-color: rgba(58, 52, 86, 0.75);
 }
 .addCandidate input{
 	margin-bottom: 10px; 
@@ -116,3 +121,31 @@ form{
    height: 34px;
    
 }
+
+.additionalDetails {
+	background-color: rgb(189, 197, 200);
+  padding: 20px;
+  font-size: 20px;
+}
+.additionalDetails li {
+    color: blue;
+      border-bottom: 1px solid brown;
+  padding: 15px;
+}
+.additionalDetails li:nth-child(odd) {
+    color: rgb(83, 81, 174);
+}
+.additionalDetails li:nth-child(even) {
+    color: rgb(71, 42, 42);
+}
+.additionalDetails button{
+  padding: 2px;
+  font-size: 18px;
+  border-radius: 17%;
+  width: 60px;
+  cursor: pointer;
+
+ }
+ .moreDetails , .deleteList, #addCandidateButton, #Enter{
+ 	cursor: pointer;
+ }
