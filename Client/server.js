@@ -32,7 +32,7 @@ app.get('/getData', function(req, res) {
 		if (err) {
 			console.log(err);
 		}else {
-			console.log(employee);
+			// console.log(employee);
 			res.send(employee);
 		}
 	});
@@ -41,16 +41,35 @@ app.get('/getData', function(req, res) {
 app.post('/addCandidate', function(req, res) {
 	console.log("Add Data" + req.body);
 	employeeModel.saveEmployee(req.body);
+	res.send(true);
 });
 
-app.post('/deleteCandidate', function(req, res) {
-	mongoose.model('employee').remove(req.body.email)
-	// employeeModel.saveEmployee(req.body);
+app.put('/updateCandidate/:email', function(req,res) {
+	// console.log("-----------------------------------------req parameters" + req.params.email);
+
+	mongoose.model('employee').findById(req.params.email, function(err,employee) {
+         if (err) {
+			console.log(err);
+		}else {
+			// console.log("++++++++++++++++++++++++++++++ " + employee);
+			employee.MonthlyRental = req.body.MonthlyRental;
+			employee.NumRooms = req.body.NumRooms;
+			employee.ApartmentArea = req.body.ApartmentArea;
+			// employeeModel.saveEmployee(req.body);
+			employee.save();
+			res.send(employee);
+		}
+	});
 });
 
-app.post('/updateCandidate', function(req, res) {
-	console.log(req.body);
-	employeeModel.updateEmployeeByEmail(req.body);
+app.delete('/deleteCandidate/:userId', function(req, res) {
+	mongoose.model('employee').remove({"_id": req.params.userId} ,function (err) {
+		if (err) {
+			console.log(err);
+		}else {
+			res.send('success!!');
+		}
+	});
 });
 
 app.listen(port,function(){

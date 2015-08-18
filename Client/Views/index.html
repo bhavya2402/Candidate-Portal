@@ -24,7 +24,7 @@
                 <select name="SearchBy" ng-model="orderCandidateList">
                     <option value="id" selected>id</option>
                     <option value="email">email</option>
-                    <option value="mobile">mobile</option>
+                    <option value="mobileNumber">mobile</option>
                     <option value="firstName">firstname</option>
                     <option value="lastName">lastname</option>
                 </select>
@@ -42,7 +42,7 @@
         <div class="MainContainer">
             <h2>Candidate List</h2>
             <table>
-                <caption>Candidate Detail</caption>
+                <!-- <caption>Candidate Detail</caption> -->
                 <thead>
                     <tr>
                         <th> User Id</th>
@@ -55,7 +55,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="candidateList in candidateDetailList">
+                    <tr ng-repeat="candidateList in candidateDetailList | filter : query | orderBy : orderCandidateList">
                         <td>{{candidateList.userId}}</td>
                         <td>{{candidateList.email}}</td>
                         <td>{{candidateList.mobileNumber}}</td>
@@ -72,7 +72,7 @@
 
   <div class="addCandidate" ng-show="isAddPage">
     <h1>Enter your Details</h1>
-    <form id="candidateForm" method="POST">
+    <form id="candidateForm">
       <span class="labelContainer">User Id:</span><input ng-model="candidateData.userId" type="text" name="UserID"><br/>
       <span class="labelContainer">Email:</span><input ng-model="candidateData.email" type="email" id="email">
       <span class="labelContainer">Mobile:</span><input ng-model="candidateData.mobileNumber" type="number"/><br/>

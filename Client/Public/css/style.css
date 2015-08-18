@@ -123,14 +123,14 @@ form{
 }
 
 .additionalDetails {
-	background-color: rgb(189, 197, 200);
+  background-color: rgb(189, 197, 200);
   padding: 20px;
   font-size: 20px;
 }
 .additionalDetails li {
     color: blue;
-      border-bottom: 1px solid brown;
-  padding: 15px;
+    border-bottom: 1px solid brown;
+    padding: 15px;
 }
 .additionalDetails li:nth-child(odd) {
     color: rgb(83, 81, 174);

@@ -39,8 +39,8 @@ app.controller('MainContrller', ['$scope', '$http', function($scope, $http){
 
 	$scope.updateForm = function(candidateData) {
         $http({
-            method: 'POST',
-            url: '/updateCandidate',
+            method: 'PUT',
+            url: '/updateCandidate/' + candidateData._id,
             data: candidateData,
             headers: {'Content-Type': 'application/json'}
 
@@ -53,21 +53,22 @@ app.controller('MainContrller', ['$scope', '$http', function($scope, $http){
         });
         $scope.candidateData = {};
 	};
-	$scope.deleteCandidate = function(candidate) {
+ 
+ 	$scope.deleteCandidate = function(candidate) {
 		$http({
-            method: 'POST',
-            url: '/deleteCandidate',
+            method: 'DELETE',
+            url: '/deleteCandidate/' + candidate._id,
             data: candidate,
             headers: {'Content-Type': 'application/json'}
 
         })
-        .success(function() {
-            console.log('frontend');
+        .success(function(res) {
+            console.log(res);
+            window.location.reload(true);
         })
         .error(function(err) {
             console.log(err);
         });
-        // $scope.candidateData = {};
 	}
      
 	$scope.submitForm = function(candidateData) {
@@ -78,20 +79,22 @@ app.controller('MainContrller', ['$scope', '$http', function($scope, $http){
             headers: {'Content-Type': 'application/json'}
 
         })
-        .success(function() {
-            console.log('frontend');
+        .success(function(res) {
+            window.alert("Your Details are successfully Submitted");
+            window.location.reload(true);
         })
         .error(function(err) {
             console.log(err);
         });
-        // $scope.candidateData = {};
+       
+        $scope.candidateData = {};
 	};
 
 	$scope.fetchDetails = function(){
 		 $http.get('/getData')
 	    .success(function(response) {
 	         console.log(response);
-	         $scope.candidateDetailList = response;	         
+	        $scope.candidateDetailList = response;	         
 	     })
 	    .error(function(response) {
 	        console.log(response);

@@ -4,7 +4,7 @@ User is taking the candidate as form input and sending the save list to the back
 
 Frontend code is implemented using Css, AngularJS
 Backend code is implemented using expressJS.
-MongoDB is used as a database(Mongolab).(fetching data from mongodb still needs to be implemented).
+MongoDB is used as a database(Mongolab).
 
 
 Dependencies that needs to be installed:

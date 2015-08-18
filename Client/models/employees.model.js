@@ -3,21 +3,21 @@ var Schema = mongoose.Schema;
 
 
 var employeeSchema = new Schema({
-	userId : Number,
+	userId : String,
 	email : String,
-	mobileNumber : String,
+	mobileNumber : Number,
 	firstName  : String,
 	lastName : String,
 	blockNumber : String,
 	streetName : String,
-	postalCode : String,
+	postalCode : Number,
 	City : String,
 	State : String,
 	Country : String,
-	MonthlyRental : String,
-	NumRooms : String,
-	NumBathrooms : String,
-	ApartmentArea : String
+	MonthlyRental : Number,
+	NumRooms : Number,
+	NumBathrooms : Number,
+	ApartmentArea : Number
 });
 
 var employeeModel = mongoose.model('employee',employeeSchema);
@@ -74,27 +74,23 @@ function saveEmployee(data) {
 
 }
 
-function fetchEmployee(data) {
+// function updateEmployeeByEmail() {
 
-}
+// 	employeeModel.update({email : 'test@testing.com'},{mobileNumber : 123456789},function(err,result) {
 
-function updateEmployeeByEmail() {
+// 		if(err) {
+// 			console.log('Error while updating');
+// 		}
+// 		else {
+// 			console.log('updated');	
+// 		}
 
-	employeeModel.update({email : 'test@testing.com'},{mobileNumber : 123456789},function(err,result) {
+// 	});
 
-		if(err) {
-			console.log('Error while updating');
-		}
-		else {
-			console.log('updated');	
-		}
+// }
 
-	});
-
-}
-
-updateEmployeeByEmail();
-// saveEmployee();
+// updateEmployeeByEmail();
+// // saveEmployee();
 
 module.exports = {
 	saveEmployee : saveEmployee
